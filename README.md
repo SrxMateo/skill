@@ -1,4 +1,7 @@
 <div align="center">
+  <img src="assets/logo.png" alt="SrxMateo Skills Logo" width="300" />
+  <br/>
+
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=0E75B6&center=true&vCenter=true&width=600&lines=SrxMateo+Elite+Skills+Engine;14+Custom+AI+Agents;End-to-End+Software+Development;DevSecOps+%26+Marketing" alt="Typing SVG" />
 
   <p>

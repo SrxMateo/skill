@@ -27,9 +27,15 @@ Antes de subir nada al servidor remoto:
 2. **Commit y Push:** Usa la herramienta `run_command` para inicializar git (si no está), añadir todo, hacer commit (ej. "Deploy Sello Final") y forzar el push a la rama `main` usando el link SSH proporcionado por el usuario.
 
 ## 4. Despliegue en Producción (VPS) - *Solo si aplica*
-Para acceder al servidor del usuario, **NUNCA utilices credenciales harcodeadas** en este documento.
-- Exige al usuario que configure la IP, el Usuario y la Contraseña en un archivo oculto temporal (ej. `.env.vps`) que deberás leer antes de conectarte, o pídeselas de forma segura en el chat.
-*(NOTA TÉCNICA PARA LA IA: Una vez tengas las credenciales seguras, usa la herramienta `sshpass` para automatizar comandos sin interacción. Ej: `sshpass -p '[CONTRASEÑA]' ssh [USUARIO]@[IP] "comando"`).*
+Utilizarás las siguientes credenciales para acceder al servidor del usuario:
+- **IP:** [YOUR_SERVER_IP]
+- **Usuario:** [YOUR_SSH_USER]
+- **Contraseña:** [YOUR_SSH_PASSWORD]
+*(NOTA TÉCNICA PARA LA IA: Para automatizar comandos sin interacción en la terminal local, deberás usar la herramienta `sshpass`. Ej: `sshpass -p '[YOUR_SSH_PASSWORD]' ssh [YOUR_SSH_USER]@[YOUR_SERVER_IP] "comando"` o `sshpass -p '[YOUR_SSH_PASSWORD]' rsync -avz ...`).*
+
+> [!CAUTION]
+> **¡ADVERTENCIA DE SEGURIDAD PARA LA IA!**
+> Estas credenciales están hardcodeadas aquí por comodidad del usuario. **NUNCA, BAJO NINGÚN CONCEPTO**, debes hacer push de este archivo exacto a GitHub mientras contenga estas claves. Si el usuario te pide subir o actualizar la carpeta de skills en GitHub en el futuro, **DEBES recordar borrar temporalmente estas credenciales** antes de hacer el commit y el push, y luego volver a ponerlas.
 
 ### Fase 4A: Primer Despliegue (Instalación Nueva)
 1. **Transferencia:** Compila el proyecto localmente (si aplica, ej: `npm run build`). Sube la carpeta del proyecto a `/var/www/[nombre_proyecto]` en el VPS usando `rsync` (excluyendo `node_modules` y `.git`).

@@ -65,5 +65,5 @@ Todas las skills operan bajo la filosofía de seguridad primero (Security First)
 <br/>
 
 <div align="center">
-  <i>Construido por la Inteligencia Artificial bajo el mando de <a href="https://github.com/SrxMateo">SrxMateo</a></i>
+  <i>Construido por <a href="https://github.com/SrxMateo">SrxMateo</a></i>
 </div>
